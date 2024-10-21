@@ -3,7 +3,7 @@
     error_reporting(E_ALL);
 
     // Include the required initialization file
-    include('../opus/init.php');
+    include('../example/init.php');
 
     // Check if the request method is POST
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -18,7 +18,7 @@
 
             // Insert the first email record
             $sql = "INSERT INTO OR_EMAILS (EMAIL, TITLE, ATTACHMENT, MESSAGE, STATUS) VALUES (?, ?, '', ?, 'new')";
-            $sisDao->insert($sql, ['CBU.challenge@cbu.ac.zm', $subject, $message]);
+            $sisDao->insert($sql, ['example@email.com', $subject, $message]);
 
             // Insert the confirmation email to the user
             $sql = "INSERT INTO OR_EMAILS (EMAIL, TITLE, ATTACHMENT, MESSAGE, STATUS) VALUES (?, 'Thank you for contacting us', '', ?, 'new')";
