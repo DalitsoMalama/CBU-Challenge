@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = htmlspecialchars($_POST['message']);
     
     // Set the recipient email address
-    $to = "dalitsomalama518@gmail.com"; // Replace with your email address
+    $to = "example@gmail.com"; // Replace with your email address
 
     // Create the email headers
     $headers = "From: " . $email . "\r\n";
